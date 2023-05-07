@@ -53,31 +53,8 @@ def responder(mensagem):
                 /2 - Um resumo sobre o assunto Iot
                 /3 - Noticias que acabaram de sair sobre Iot
     """)
-    amor(mensagem)
                  
 
-
-@bot.message_handler(responder)
-def amor (mensagem,msg): 
-    msg=mensagem.text
-    if msg.lower()=="giulia" or msg.lower()=="giulia" or msg.lower()=="giu":
-        bot.reply_to(mensagem,"OII amor da minha vida")
-        part2(mensagem,msg)
-        return True
-    else:
-        part2(mensagem,msg)
-
-         
-
-def part2 (mensagem,msg):
-    txt="""Eu sou um Robô que vai te ensinar de forma resumida sobre o que é IOT 
-        Bom, o que voce gostaria de saber? (Clique em alguma das opções)
-                    /1 - Sobre Iot curisosidade,
-                    /2 - Iot resumo, 
-                    /3 - Iot inicio,
-                    /4 - noticias atuais"""
-    bot.send_message(mensagem.chat.id,txt)
-    return True
 
 
 
